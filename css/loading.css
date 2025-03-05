@@ -13,7 +13,7 @@ body{
 }
 
 .bg{
-    background-image: url('..images/dog.avif')
+    background-image: url('../images/dog.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

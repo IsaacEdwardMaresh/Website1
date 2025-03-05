@@ -1,4 +1,4 @@
-const LoadText = document.querySelector('.loading-text')
+const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
 
 let load = 0
@@ -11,6 +11,6 @@ function blurring() {
         clearInterval(int)
     }
     loadText.innerText = `${load}%`
-    bg.style.filter = "blur(${100 - load}px)"
-    loadText.style.opacity = `${1 - (load/100)}`
+    bg.style.filter = `blur(${50 - (load/2)}px)`
+    loadText.style.opacity = `${1 - load/100 }`
 }

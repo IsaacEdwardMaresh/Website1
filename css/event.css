@@ -1,0 +1,73 @@
+* {
+    box-sizing: boarder-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: teal;
+}
+
+.box {
+    background-color: lime;
+    color: white;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#element1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#element2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+}
+
+#element3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#element4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#element5 {
+    position: absolute;
+    bottom: center;
+    left: center;
+    right: center;
+    top: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+
+#element5 {
+    animation: spin .3s linear infinite;
+    animation-play-state: paused;
+}
