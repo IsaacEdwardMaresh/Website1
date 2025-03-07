@@ -6,25 +6,25 @@ const element5 = document.getElementById('element5')
 const element6 = document.getElementById('element6')
 
 element1.addEventListener('click', ()=>{
-    document.style.backgroundColor = "red"
+    document.body.style.backgroundColor = "red"
 })
 
 element2.addEventListener('click', ()=>{
-    document.style.backgroundColor = "orange"
+    document.body.style.backgroundColor = "orange"
 })
 
 element3.addEventListener('click', ()=>{
-    document.style.backgroundColor = "yellow"
+    document.body.style.backgroundColor = "yellow"
 })
 
 element4.addEventListener('click', ()=>{
-    document.style.backgroundColor = "green"
+    document.body.style.backgroundColor = "green"
 })
 
 element5.addEventListener('click', ()=>{
-    document.style.backgroundColor = "blue"
+    document.body.style.backgroundColor = "blue"
 })
 
 element6.addEventListener('click', ()=>{
-    document.style.backgroundColor = "purple"
+    document.body.style.backgroundColor = "purple"
 })
