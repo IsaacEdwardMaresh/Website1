@@ -17,6 +17,4 @@ btn.addEventListener('click', () => {
     sounds.forEach(sound => {
         document.getElementById(sound).pause()
             document.getElementById(sound).currentTime = 0;
-        )
     })
-}
