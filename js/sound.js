@@ -13,9 +13,9 @@ btn.addEventListener('click', () => {
 })
 
 
-stopSongs(){
+    stopSongs()
     sounds.forEach(sound => {
-        document.getElementById(sound).pause(
+        document.getElementById(sound).pause()
             document.getElementById(sound).currentTime = 0;
         )
     })
