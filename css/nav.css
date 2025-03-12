@@ -42,3 +42,18 @@ right:0;
     color: #ffffff;
     padding: 7px 15px;
     text-decoration: none;
+}
+
+.hero {
+    background-image:url('../images/nigeria.avif')
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255)
+}
