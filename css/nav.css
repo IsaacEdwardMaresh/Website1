@@ -37,3 +37,8 @@ right:0;
     align-items: center;
     justify-content: center;
 }
+
+.nav a {
+    color: #ffffff;
+    padding: 7px 15px;
+    text-decoration: none;
