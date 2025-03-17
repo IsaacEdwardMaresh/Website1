@@ -2,3 +2,9 @@
 * {
     box-sizing: boarder-box;
 }
+ body {
+    background-color: #967969;
+    color: #ffffff;
+    font-family: 'Press Start 2P', sans-serif;
+
+ }
