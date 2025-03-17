@@ -6,5 +6,20 @@
     background-color: #967969;
     color: #ffffff;
     font-family: 'Press Start 2P', sans-serif;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+ }
 
+ h1 {
+    line-height: 1.4;
+ }
+
+ .btn {
+    boarder: 0;
+    background-color: white;
+    color: #967969
+    padding: 15px 20px;
+    font-family: inherit;
+    curser: pointer;
  }
