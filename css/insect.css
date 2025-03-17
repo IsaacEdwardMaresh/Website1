@@ -64,3 +64,12 @@
     height: 120px;
     object-fit: contain;
 }
+/*
+.choose-insect-btn img #fly {
+    height: 500;
+    width: 1;
+} */
+
+.choose-insect-btn:active {
+    background-color: rgba(255,255,255,0.7);
+}
