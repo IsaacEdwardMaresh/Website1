@@ -16,10 +16,23 @@
  }
 
  .btn {
-    boarder: 0;
+    border: 0;
     background-color: white;
-    color: #967969
+    color: #967969;
     padding: 15px 20px;
-    font-family: inherit;
-    curser: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+    cursor: pointer;
+ }
+
+ .btn:hover {
+    opacity: 9.0;
+ }
+
+ .screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
  }
