@@ -33,8 +33,6 @@ function startGame() {
 function increaseTime() {
     let s = seconds % 60
     let m = Math.floor(seconds / 60)
-    timeEl.innerHTML = `time: ${m}:${s}`
-    seconds = seconds + 1;
     if (s < 10){
         s = `0${s}`
     }
@@ -42,6 +40,9 @@ function increaseTime() {
             m = `0${m}`
         }
     }
+    timeEl.innerHTML = `time: ${m}:${s}`
+    seconds = seconds + 1;
+
 
 Function createInsect(){
     const insect = document.createElement('div')
@@ -49,4 +50,11 @@ Function createInsect(){
     insect.innerHTML = `<img scr="${selected_insect.src}"
     alt = "${selected_insect.alt}">`
     game_container.appendChild(insect)
+}
+
+function getRandomLocation(){
+    const width = window.innerWidth
+    const height = window.innerHeight
+    console.log(Math.random())
+    const x = Math.random
 }
