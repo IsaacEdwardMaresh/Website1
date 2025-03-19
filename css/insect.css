@@ -109,3 +109,17 @@
 .message.visible {
     opacity: 1;
 }
+
+.insect {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.insect.caught {
+    transform: scale(0);
+}

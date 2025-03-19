@@ -1,0 +1,7 @@
+const screens = document.querySelectorAll('.screen')
+const start_btn = document.getElementById('start-btn')
+const choose_insect_btns = document.querySelectorAll('.choose-insect-btn')
+const game_container = document.getElementId('game-container')
+const timeEl = doument.getElementById('time')
+const scoreEl = doument.getElementById('score')
+const message = doument.getElementById('message')
