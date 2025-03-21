@@ -121,6 +121,10 @@
     position: absolute;
 }
 
+.insect img {
+    width: 100px;
+    height: 100px;
+}
 .insect.caught {
     transform: scale(0);
 }
