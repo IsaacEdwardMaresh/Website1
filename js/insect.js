@@ -56,5 +56,14 @@ function getRandomLocation(){
     const width = window.innerWidth
     const height = window.innerHeight
     console.log(Math.random())
-    const x = Math.random() *
+    const x = Math.random() * width
+    const y = Math.random() * height
+    return {x, y} = getRandomLocation()
+    insect.style.top = `${y}px`
+    insect.style.left = `${y}px`
+    game_container.appendChild(insect)
+}
+
+insect.addEventListener('click', () => {
+    score = score + 1
 }
