@@ -61,10 +61,16 @@ function createInsect(){
     function catchInsect(){
         increaseScore()
         this.classList.add('caught')
+        setTimeout( () => this.remove(), 2000)
+        add(insects)
+    }
+    function addInsects() {
+        setTimeout(createInsect, 1000)
+        setTimeout(createInsect, 1500)
     }
     function increaseScore(){
         score = score + 1;
-        .innerHTML
+        scoreEl.innerHTML = `Score: ${score}`
 
     }
 })
