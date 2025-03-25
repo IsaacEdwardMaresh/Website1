@@ -18,11 +18,11 @@ choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
         screens[1].classList.add('up')
         const img = btn.querySelector('img')
-            const src = img.getAttribute('src')
-            const alt = img.getAttribute('alt')
-            selected_insect = {src, alt}
-            startGame()
-            createInsect()
+        const src = img.getAttribute('src')
+        const alt = img.getAttribute('alt')
+        selected_insect = {src,alt}
+        startGame()
+        createInsect()
     })
 })
 
@@ -33,52 +33,59 @@ function startGame() {
 function increaseTime() {
     let s = seconds % 60
     let m = Math.floor(seconds / 60)
-    if (s < 10){
+    if (s < 10) {
         s = `0${s}`
     }
-        if (m < 10){
-            m = `0${m}`
-        }
+    if (m < 10) {
+        m = `0${m}`
+    }
 
     timeEl.innerHTML = `time: ${m}:${s}`
     seconds = seconds + 1;
-    }
+}
 
-function createInsect(){
+function createInsect() {
     const insect = document.createElement('div')
     insect.classList.add('insect')
-    insect.innerHTML = `<img scr="${selected_insect.src}"
-    alt = "${selected_insect.alt}">`
+    insect.innerHTML = `<img src="${selected_insect.src}" alt = "${selected_insect.alt}">`
     game_container.appendChild(insect)
-    return {x, y} = getRandomLocation()
+    const {x,y} = getRandomLocation()
     insect.style.top = `${y}px`
-    insect.style.left = `${y}px`
+    insect.style.left = `${x}px`
     game_container.appendChild(insect)
-
-    insect.addEventListener('click', catchInsect){
-
+    console.log("hi")
+    insect.addEventListener('click', catchInsect)
     }
-    function catchInsect(){
+
+
+    function catchInsect() {
         increaseScore()
         this.classList.add('caught')
-        setTimeout( () => this.remove(), 2000)
-        add(insects)
+        setTimeout(() => this.remove(), 2000)
+        addInsects()
     }
+
     function addInsects() {
+        for(let i = 0; i < 1000; i++){
         setTimeout(createInsect, 1000)
         setTimeout(createInsect, 1500)
+        }
     }
-    function increaseScore(){
+
+    function increaseScore() {
         score = score + 1;
+        if (score == 10){
+            message.classList.add('visible')
+        }
         scoreEl.innerHTML = `Score: ${score}`
 
     }
-})
 
-function getRandomLocation(){
+function getRandomLocation() {
     const width = window.innerWidth
     const height = window.innerHeight
     console.log(Math.random())
-    const x = Math.random() * width
-    const y = Math.random() * height
+    const x = Math.random() * (width -200) + 100
+    const y = Math.random() * (height - 200) + 100
+    return {x,y}
 }
