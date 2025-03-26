@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image:url('../images/x.avif');
+}
+
+.myh1 {
+    background-color: green;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 20%;
+
+}
+
+p1 {
+    color: white;
+    font-size: 20px;
+}
