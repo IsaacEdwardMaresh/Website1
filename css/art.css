@@ -58,36 +58,88 @@ left: 90px;
         position: absolute;
         border-radius: 50%;
     z-index: 2;
-    top: 70px;
-    left: 60px;
+    top: 15px;
+    left: 30px;
         }
 
-.cloud1 {
+        .bush4 {
+            background-color: #90EE90;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        z-index: 2;
+        top: 90px;
+        left: 30px;
+            }
 
+.cloud1 {
+background-color: white;
+border-radius: 50%;
+height:150px;
+width: 180px;
+position: absolute;
+left: 300px;
+top: 18px;
 }
 
 .cloud2 {
-
+    background-color: white;
+    border-radius: 50%;
+    height:150px;
+    width: 180px;
+    position: absolute;
+    left: 370px;
+    top: 18px;
 }
 
 .cloud3 {
-
+    background-color: white;
+    border-radius: 50%;
+    height:150px;
+    width: 180px;
+    position: absolute;
+    left: 860px;
+    top: 22px;
 }
 
 .cloud4 {
-
+    background-color: white;
+    border-radius: 50%;
+    height:150px;
+    width: 180px;
+    position: absolute;
+    left: 800px;
+    top: 22px;
 }
-
+.cloud5 {
+    background-color: white;
+    border-radius: 50%;
+    height:180px;
+    width: 180px;
+    position: absolute;
+    left: 335px;
+    top: 0px;
+}
+.cloud6 {
+    background-color: white;
+    border-radius: 50%;
+    height:180px;
+    width: 180px;
+    position: absolute;
+    left: 830px;
+    top: 8px;
+}
 .door {
-
+background-color:
 }
 
 .house {
-
+    background-color:
 }
 
 .roof {
-
+    background-color: #762E21;
 }
 
 
