@@ -130,16 +130,42 @@ top: 18px;
     left: 830px;
     top: 8px;
 }
+
 .door {
-background-color:
+background-color: #964B00;
+height: 170px;
+width: 90px;
+position: absolute;
+bottom: 50px;
+right: 280px;
+z-index: 5;
 }
 
 .house {
-    background-color:
+    background-color: #cdc7b9;
+    height: 280px;
+    width: 380px;
+    position: absolute;
+    right: 80px;
+    bottom: 50px;
 }
 
 .roof {
     background-color: #762E21;
+    height: 30px;
+    width: 400px;
+    position: absolute;
+    right: 70px;
+    bottom: 330px;
 }
-
+.door-bell {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: gold;
+    bottom:130px;
+    right: 293px;
+    z-index: 10;
+}
 
