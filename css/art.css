@@ -1,6 +1,93 @@
 .sun {
- width: 300px;
- Height: 300px;
+ width: 160px;
+ Height: 160px;
  background-color: yellow;
- 
+border-radius: 50%;
+position: absolute;
+top: 10px;
+right: 10px;
 }
+
+body {
+    background-color: #87CEEB;
+}
+
+.grass {
+height: 50px;
+width: 100%;
+position: absolute;
+background-color: green;
+bottom : 0;
+}
+
+.trunk {
+background-color: #725c42;
+height: 350px;
+width: 80px;
+position: absolute;
+bottom: 50px;
+left: 90px;
+}
+
+.bush1 {
+    background-color: #90EE90;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    left: -30px;
+    top: 70px;
+z-index: 2;
+}
+
+.bush2 {
+    background-color: #90EE90;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+z-index: 2;
+top: 70px;
+left: 90px;
+    }
+
+    .bush3 {
+        background-color: #90EE90;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    z-index: 2;
+    top: 70px;
+    left: 60px;
+        }
+
+.cloud1 {
+
+}
+
+.cloud2 {
+
+}
+
+.cloud3 {
+
+}
+
+.cloud4 {
+
+}
+
+.door {
+
+}
+
+.house {
+
+}
+
+.roof {
+
+}
+
+
