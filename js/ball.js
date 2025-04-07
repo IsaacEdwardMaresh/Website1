@@ -59,7 +59,7 @@ function createLPadel() {
     LPadel.style.top = `${LPadelYPosition}px`
 }
 
-LPadel.addEventlistener('keyup', (event) => {
+LPadel.addEventListener('keyup', (event) => {
     if(event.key == "w") {
         if(LPadelYposition <= 0) {
             LpadelYPosition = 0
