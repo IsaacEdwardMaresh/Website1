@@ -4,6 +4,8 @@ const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
 let LPadelWidth = 20
 let LPadelHeight = 100
+let LPadelSpeed = 5
+let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
 
 const ballRadius = 100
 const windowHeight = window.innerHeight
@@ -45,10 +47,24 @@ function moveBall(){
     }
 }
 
-create LPadel() {
+createLPadel()
+
+function createLPadel() {
     LPadel.style.height = `${LPadelHeight}px`
     LPadel.style.width = `${LPadelWidth}px`
     LPadel.style.backgroundColor = 'blue'
     LPadel.style.position = 'absolute'
-    LPadel.style.left = "
+    LPadel.style.left = "50px"
+    LPadel.style.top = `${LPadelYPosition}px`
 }
+
+LPadel.addEventlistener('keyup', (event) => {
+    if(event.key == "w") {
+        LPadelYPosition = LPadelYposition - LPadelSpeed
+    }
+    if(event.key == "s") {
+        LPadelYPosition = LPadelYposition + LPadelSpeed
+
+    }
+    LPadel.style.top = `${LPadelYPosition}px`
+})
