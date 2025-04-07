@@ -61,7 +61,7 @@ function createLPadel() {
 
 LPadel.addEventlistener('keyup', (event) => {
     if(event.key == "w") {
-        if(LPadelYposition < 0) {
+        if(LPadelYposition <= 0) {
             LpadelYPosition = 0
         }
         else {
@@ -69,6 +69,12 @@ LPadel.addEventlistener('keyup', (event) => {
         }
     }
     if(event.key == "s") {
+        if(LPadelYposition <= windowHeight - LPadelHeight) {
+            LpadelYPosition = windowHeight - LPadelHeight
+        }
+        else {
+            LPadelYPosition = LPadelYPosition + LPadelSpeed
+        }
         LPadelYPosition = LPadelYposition + LPadelSpeed
 
     }
