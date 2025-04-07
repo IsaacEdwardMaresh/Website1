@@ -61,21 +61,21 @@ function createLPadel() {
 
 document.addEventListener('keyup', (event) => {
     if(event.key == "w") {
-        if(LPadelYposition <= 0) {
+        if(LPadelYPosition <= 0) {
             LpadelYPosition = 0
         }
         else {
-        LPadelYPosition = LPadelYposition - LPadelSpeed
+        LPadelYPosition = LPadelYPosition - LPadelSpeed
         }
     }
     if(event.key == "s") {
-        if(LPadelYposition <= windowHeight - LPadelHeight) {
+        if(LPadelYPosition <= windowHeight - LPadelHeight) {
             LpadelYPosition = windowHeight - LPadelHeight
         }
         else {
             LPadelYPosition = LPadelYPosition + LPadelSpeed
         }
-        LPadelYPosition = LPadelYposition + LPadelSpeed
+        LPadelYPosition = LPadelYPosition + LPadelSpeed
 
     }
     LPadel.style.top = `${LPadelYPosition}px`
