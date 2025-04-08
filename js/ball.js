@@ -35,7 +35,6 @@ ball.style.top = `${ballYPosition}px`
 ball.style.left = `${ballXPosition}px`
 }
 
-setInterval(moveBall, 10)
 
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
