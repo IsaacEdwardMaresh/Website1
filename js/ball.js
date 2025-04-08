@@ -19,6 +19,7 @@ let ballYDirection = 1
 let score = 0 // display score and increase score by one when bal hit pad
 let level = 1// increase level by 1 every time score increases by ten
 //as levels increas increase ball speed
+// if ball gets past paddle end game.
 
 createBall()
 
