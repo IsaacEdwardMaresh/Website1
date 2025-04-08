@@ -16,6 +16,9 @@ let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
 let ballXDirection = 1
 let ballYDirection = 1
+let score = 0 // display score and increase score by one when bal hit pad
+let level = 1// increase level by 1 every time score increases by ten
+//as levels increas increase ball speed
 
 createBall()
 
