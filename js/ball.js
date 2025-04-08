@@ -54,6 +54,12 @@ function moveBall(){
     let LPadelBottom = LPadelYPosition + LPadelHeight
     let LPadelRight = LPadelXPosition + LPadelWidth
 
+    if(
+        (ballBottom >= LPadelTop) &&
+        (LLPadelBottom >= ballTop) &&
+        (ballLeft <= LPadelRight) &&
+        (ballXDirection == -1)
+    )
 }
 
 createLPadel()
@@ -67,24 +73,26 @@ function createLPadel() {
     LPadel.style.top = `${LPadelYPosition}px`
 }
 
-document.addEventListener('keyup', (event) => {
-    if(event.key == "w") {
-        if(LPadelYPosition <= 0) {
-            LpadelYPosition = 0
-        }
-        else {
-        LPadelYPosition = LPadelYPosition - LPadelSpeed
-        }
-    }
-    if(event.key == "s") {
-        if(LPadelYPosition <= windowHeight - LPadelHeight) {
-            LpadelYPosition = windowHeight - LPadelHeight
-        }
-        else {
-            LPadelYPosition = LPadelYPosition + LPadelSpeed
-        }
-        LPadelYPosition = LPadelYPosition + LPadelSpeed
+wKey = false
+sKey = false
 
+document.addEventListener('keydown', (event) => {
+    if(event.key == "w") {
+        wKey = true
+        }
+    if(event.key == "s") {
+        sKey = true
+        }
     }
+
+    document.addEventListener('keyup', (event) => {
+        if(event.key == "w") {
+            wKey = false
+            }
+        if(event.key == "s") {
+            sKey = false
+            }
+        }
+
     LPadel.style.top = `${LPadelYPosition}px`
 })
