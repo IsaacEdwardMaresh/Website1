@@ -32,7 +32,7 @@ ball.style.left = `${ballXPosition}px`
 
 setInterval(moveBall, 10)
 
-function moveBall(){
+function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ballYPosition = ballYPosition + ballSpeed * ballYDirection
 
@@ -94,5 +94,20 @@ document.addEventListener('keydown', (event) => {
             }
         }
 
-    LPadel.style.top = `${LPadelYPosition}px`
+        function movePadel() {
+            if(wKey && LPadelYPositon > 0) {
+                LPadelYPosition = LPadelYPosition - LPadelSpeed
+        }
+        if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
+            LPadelYPosition = LPadelYPosition + LPadelSpeed
+        }
+        LPadel.style.top = `${LPadelYPosition}px`
+    }
+    function animate() {
+        move(Ball)
+        moveLPadel()
+        requestAnimationFrame(animate)
+    }
+    animate()
 })
+
