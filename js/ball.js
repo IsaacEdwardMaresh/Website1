@@ -63,7 +63,8 @@ function moveBall() {
         (LLPadelBottom >= ballTop) &&
         (ballLeft <= LPadelRight) &&
         (ballXDirection == -1)
-    )
+    ) {
+        ballXDirection = ballXDirection * -1
 }
 
 createLPadel()
