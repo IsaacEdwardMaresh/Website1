@@ -46,6 +46,14 @@ function moveBall(){
     if (ballXPosition < 0|| ballXPosition > windowWidth  - 2 * ballRadius){
         ballXDirection = ballXDirection * -1
     }
+
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let LPadelTop = LPadelYPosition
+    let LPadelBottom = LPadelYPosition + LPadelHeight
+    let LPadelRight = LPadelXPosition + LPadelWidth
+
 }
 
 createLPadel()
