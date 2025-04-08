@@ -9,6 +9,7 @@ let LPadelWidth = 10
 let LPadelHeight = 100
 let LPadelSpeed = 25
 let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
+let LPadelXPosition = 70
 
 const ballRadius = 100
 let ballXPosition = windowWidth/2 - ballRadius
@@ -60,7 +61,7 @@ function moveBall() {
 
     if(
         (ballBottom >= LPadelTop) &&
-        (LLPadelBottom >= ballTop) &&
+        (LPadelBottom >= ballTop) &&
         (ballLeft <= LPadelRight) &&
         (ballXDirection == -1)
     ) {
@@ -88,7 +89,7 @@ document.addEventListener('keydown', (event) => {
     if(event.key == "s") {
         sKey = true
         }
-    }
+    })
 
     document.addEventListener('keyup', (event) => {
         if(event.key == "w") {
@@ -97,7 +98,7 @@ document.addEventListener('keydown', (event) => {
         if(event.key == "s") {
             sKey = false
             }
-        }
+        })
 
         function movePadel() {
             if(wKey && LPadelYPositon > 0) {
@@ -109,10 +110,10 @@ document.addEventListener('keydown', (event) => {
         LPadel.style.top = `${LPadelYPosition}px`
     }
     function animate() {
-        move(Ball)
+        moveBall()
         moveLPadel()
         requestAnimationFrame(animate)
     }
     animate()
-})
+}
 
