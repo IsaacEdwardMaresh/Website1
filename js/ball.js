@@ -109,7 +109,24 @@ document.addEventListener('keydown', (event) => {
         }
         LPadel.style.top = `${LPadelYPosition}px`
     }
-    if(ballXPosition <=)
+
+const scroreboard = document.createElement('div')
+document.body.appendChild(scoreboard)
+
+scoreboard()
+
+function scoreboard() {
+    scoreboard.style.height = '20px'
+    scoreboard.style.width = '40px'
+    scoreboard.style.backgroundColor = 'blue'
+    scoreboard.style.position = 'absolute'
+    scoreboard.style.right = '20px'
+    scoreboard.style.top = '20px'
+}
+
+    if(ballXPosition <= ballRadius / 2) {
+
+    }
 
     function animate() {
         moveBall()
