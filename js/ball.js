@@ -100,7 +100,7 @@ document.addEventListener('keydown', (event) => {
             }
         })
 
-        function movePadel() {
+        function moveLPadel() {
             if(wKey && LPadelYPositon > 0) {
                 LPadelYPosition = LPadelYPosition - LPadelSpeed
         }
