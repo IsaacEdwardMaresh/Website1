@@ -146,6 +146,20 @@ document.addEventListener('keydown', (event) => {
     const gameOver = document.createElement('div')
     document.body.appendChild(gameOver)
 
+    function gameOvered() {
+        gameOver.style.height = '100%'
+        gameOver.style.width = '100%'
+        gameOver.style.backgroundColor = 'black'
+        gameOver.style.position = 'absolute'
+        gameOver.style.right = '0'
+        gameOver.style.top = '0%'
+        gameOver.style.fontSize = 250px
+        gameOver.style.color = 'red'
+        gameOver.innerHTML = GAME OVER
+        gameOver.style.padding = '3px'
+        gameOver.style.zIndex = 2
+    }
+
     function loser() {
     if(ballXPosition <= ballRadius / 2) {
         }
