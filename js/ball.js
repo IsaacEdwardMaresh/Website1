@@ -143,7 +143,8 @@ document.addEventListener('keydown', (event) => {
 
     }
 
-
+    const gameOver = document.createElement('div')
+    document.body.appendChild(gameOver)
 
     function loser() {
     if(ballXPosition <= ballRadius / 2) {
