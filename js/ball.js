@@ -65,6 +65,8 @@ function moveBall() {
         (ballXDirection == -1)
     ) {
         ballXDirection = ballXDirection * -1
+        score = score + 1
+        createScoreboard()
     }
 }
 
@@ -143,15 +145,6 @@ function createLevels() {
     levels.innerHTML = `Level: ${level}`
     levels.style.padding = '3px'
 }
-    function incScore() {
-        if(
-            (ballBottom >= LPadelTop) &&
-            (LPadelBottom >= ballTop) &&
-            (ballLeft <= LPadelRight) &&
-            (ballXDirection == -1)
-        ) {
-            score = score + 1
-    }
 
     function loser() {
     if(ballXPosition <= ballRadius / 2) {
@@ -173,7 +166,6 @@ function createLevels() {
     function animate() {
         loser()
         incLevel()
-        createScoreboard()
         createLevels()
         moveBall()
         moveLPadel()
