@@ -101,10 +101,10 @@ document.addEventListener('keydown', (event) => {
         })
 
         function moveLPadel() {
-            if(wKey && LPadelYPositon > 0) {
+            if(wKey && LPadelYPosition > 0) {
                 LPadelYPosition = LPadelYPosition - LPadelSpeed
         }
-        if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
+        if (sKey && LPadelYPosition < windowHeight - LPadelHeight) {
             LPadelYPosition = LPadelYPosition + LPadelSpeed
         }
         LPadel.style.top = `${LPadelYPosition}px`
