@@ -22,9 +22,9 @@ let level = 1// increase level by 1 every time score increases by ten
 //as levels increas increase ball speed
 // if ball gets past paddle end game.
 
+
+
 createBall()
-
-
 function createBall(){
 ball.style.height = `${2*ballRadius}px`
 ball.style.width = `${2*ballRadius}px`
@@ -99,15 +99,17 @@ document.addEventListener('keydown', (event) => {
             }
         })
 
-        function movePadel() {
-            if(wKey && LPadelYPositon > 0) {
-                LPadelYPosition = LPadelYPosition - LPadelSpeed
-        }
-        if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
-            LPadelYPosition = LPadelYPosition + LPadelSpeed
-        }
-        LPadel.style.top = `${LPadelYPosition}px`
-    }
+    //     function movePadel() {
+    //         if(wKey && LPadelYPositon > 0) {
+    //             LPadelYPosition = LPadelYPosition - LPadelSpeed
+    //     }
+    //     if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
+    //         LPadelYPosition = LPadelYPosition + LPadelSpeed
+    //     }
+    //     LPadel.style.top = `${LPadelYPosition}px`
+    // }
+
+
     function animate() {
         moveBall()
         moveLPadel()
