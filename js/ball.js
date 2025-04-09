@@ -110,7 +110,7 @@ document.addEventListener('keydown', (event) => {
         LPadel.style.top = `${LPadelYPosition}px`
     }
 
-const scroreboard = document.createElement('div')
+const scoreboard = document.createElement('div')
 document.body.appendChild(scoreboard)
 
 scoreboard()
