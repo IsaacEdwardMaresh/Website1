@@ -11,7 +11,7 @@ let LPadelSpeed = 25
 let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
 let LPadelXPosition = 70
 
-const ballRadius = 10
+const ballRadius = 20
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
@@ -116,34 +116,65 @@ document.addEventListener('keydown', (event) => {
     createScoreboard()
 
     function createScoreboard() {
-        scoreboard.style.height = '40px'
-        scoreboard.style.width = '120px'
+        scoreboard.style.height = '20px'
+        scoreboard.style.width = '70px'
         scoreboard.style.backgroundColor = 'black'
         scoreboard.style.position = 'absolute'
         scoreboard.style.right = '20px'
         scoreboard.style.top = '20px'
         scoreboard.style.color = 'white'
+        scoreboard.innerHTML = `Score: ${score}`
+        scoreboard.style.padding = '3px'
+
     }
     const levels = document.createElement('div')
 document.body.appendChild(levels)
 
-createLevel()
+createLevels()
 
-function createLevel() {
-    scoreboard.style.height = '40px'
-    scoreboard.style.width = '120px'
-    scoreboard.style.backgroundColor = 'black'
-    scoreboard.style.position = 'absolute'
-    scoreboard.style.right = '180px'
-    scoreboard.style.top = '20px'
-    scoreboard.style.color = 'white'
+function createLevels() {
+    levels.style.height = '20px'
+    levels.style.width = '70px'
+    levels.style.backgroundColor = 'black'
+    levels.style.position = 'absolute'
+    levels.style.right = '120px'
+    levels.style.top = '20px'
+    levels.style.color = 'white'
+    levels.innerHTML = `Level: ${level}`
+    levels.style.padding = '3px'
 }
-
-    if(ballXPosition <= ballRadius / 2) {
-
+    function incScore() {
+        if(
+            (ballBottom >= LPadelTop) &&
+            (LPadelBottom >= ballTop) &&
+            (ballLeft <= LPadelRight) &&
+            (ballXDirection == -1)
+        ) {
+            score = score + 1
     }
 
+    function loser() {
+    if(ballXPosition <= ballRadius / 2) {
+        }
+    }
+
+    function incLevel() {
+    if(score == 10) {
+        ballSpeed = ballSpeed * 2
+    }
+    if(score == 20) {
+        ballSpeed = ballSpeed * 2
+    }
+    if(score == 30) {
+        ballSpeed = ballSpeed * 2
+    }
+}
+
     function animate() {
+        loser()
+        incLevel()
+        createScoreboard()
+        createLevels()
         moveBall()
         moveLPadel()
         requestAnimationFrame(animate)
