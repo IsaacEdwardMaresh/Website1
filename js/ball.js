@@ -66,7 +66,21 @@ function moveBall() {
     ) {
         ballXDirection = ballXDirection * -1
         score = score + 1
+
+        if(score == 2) {
+            ballSpeed = ballSpeed * 2
+            level = 2
+        }
+        if(score == 4) {
+            ballSpeed = ballSpeed * 2
+            level = 3
+        }
+        if(score == 6) {
+            ballSpeed = ballSpeed * 2
+            level = 4
+        }
         createScoreboard()
+        incLevel()
     }
 }
 
@@ -125,7 +139,7 @@ document.addEventListener('keydown', (event) => {
         scoreboard.style.right = '20px'
         scoreboard.style.top = '20px'
         scoreboard.style.color = 'white'
-        scoreboard.innerHTML = `Score: ${score}`
+        scoreboard.innerHTML = `Score: ${score}  Level: ${level}`
         scoreboard.style.padding = '3px'
 
     }
@@ -151,21 +165,8 @@ function createLevels() {
         }
     }
 
-    function incLevel() {
-    if(score == 10) {
-        ballSpeed = ballSpeed * 2
-    }
-    if(score == 20) {
-        ballSpeed = ballSpeed * 2
-    }
-    if(score == 30) {
-        ballSpeed = ballSpeed * 2
-    }
-}
-
     function animate() {
         loser()
-        incLevel()
         createLevels()
         moveBall()
         moveLPadel()
