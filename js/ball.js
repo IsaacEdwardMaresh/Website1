@@ -11,7 +11,7 @@ let LPadelSpeed = 25
 let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
 let LPadelXPosition = 70
 
-const ballRadius = 100
+const ballRadius = 10
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
