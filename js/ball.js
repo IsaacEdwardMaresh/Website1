@@ -80,7 +80,6 @@ function moveBall() {
             level = 4
         }
         createScoreboard()
-        incLevel()
     }
 }
 
