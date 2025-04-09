@@ -36,36 +36,36 @@ ball.style.left = `${ballXPosition}px`
 }
 
 
-function moveBall() {
-    ballXPosition = ballXPosition + ballSpeed * ballXDirection
-    ballYPosition = ballYPosition + ballSpeed * ballYDirection
+// function moveBall() {
+//     ballXPosition = ballXPosition + ballSpeed * ballXDirection
+//     ballYPosition = ballYPosition + ballSpeed * ballYDirection
 
-    ball.style.left = `${ballXPosition}px`
-    ball.style.top = `${ballYPosition}px`
+//     ball.style.left = `${ballXPosition}px`
+//     ball.style.top = `${ballYPosition}px`
 
-    if (ballYPosition < 0|| ballYPosition > windowHeight - 2 * ballRadius){
-        ballYDirection = ballYDirection * -1
-    }
+//     if (ballYPosition < 0|| ballYPosition > windowHeight - 2 * ballRadius){
+//         ballYDirection = ballYDirection * -1
+//     }
 
-    if (ballXPosition < 0|| ballXPosition > windowWidth  - 2 * ballRadius){
-        ballXDirection = ballXDirection * -1
-    }
+//     if (ballXPosition < 0|| ballXPosition > windowWidth  - 2 * ballRadius){
+//         ballXDirection = ballXDirection * -1
+//     }
 
-    let ballTop = ballYPosition
-    let ballBottom = ballYPosition + 2 * ballRadius
-    let ballLeft = ballXPosition
-    let LPadelTop = LPadelYPosition
-    let LPadelBottom = LPadelYPosition + LPadelHeight
-    let LPadelRight = LPadelXPosition + LPadelWidth
+//     let ballTop = ballYPosition
+//     let ballBottom = ballYPosition + 2 * ballRadius
+//     let ballLeft = ballXPosition
+//     let LPadelTop = LPadelYPosition
+//     let LPadelBottom = LPadelYPosition + LPadelHeight
+//     let LPadelRight = LPadelXPosition + LPadelWidth
 
-    if(
-        (ballBottom >= LPadelTop) &&
-        (LPadelBottom >= ballTop) &&
-        (ballLeft <= LPadelRight) &&
-        (ballXDirection == -1)
-    ) {
-        ballXDirection = ballXDirection * -1
-}
+//     if(
+//         (ballBottom >= LPadelTop) &&
+//         (LPadelBottom >= ballTop) &&
+//         (ballLeft <= LPadelRight) &&
+//         (ballXDirection == -1)
+//     ) {
+//         ballXDirection = ballXDirection * -1
+// }
 
 createLPadel()
 
@@ -99,22 +99,20 @@ document.addEventListener('keydown', (event) => {
             }
         })
 
-    //     function movePadel() {
-    //         if(wKey && LPadelYPositon > 0) {
-    //             LPadelYPosition = LPadelYPosition - LPadelSpeed
-    //     }
-    //     if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
-    //         LPadelYPosition = LPadelYPosition + LPadelSpeed
-    //     }
-    //     LPadel.style.top = `${LPadelYPosition}px`
-    // }
+        function movePadel() {
+            if(wKey && LPadelYPositon > 0) {
+                LPadelYPosition = LPadelYPosition - LPadelSpeed
+        }
+        if (sKey && LPadelYPositon < windowHeight - LPadelHeight) {
+            LPadelYPosition = LPadelYPosition + LPadelSpeed
+        }
+        LPadel.style.top = `${LPadelYPosition}px`
+    }
 
 
     function animate() {
-        moveBall()
-        moveLPadel()
+        // moveBall()
+        // moveLPadel()
         requestAnimationFrame(animate)
     }
     animate()
-}
-
