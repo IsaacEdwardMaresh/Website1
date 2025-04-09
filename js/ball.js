@@ -110,18 +110,33 @@ document.addEventListener('keydown', (event) => {
         LPadel.style.top = `${LPadelYPosition}px`
     }
 
-const scoreboard = document.createElement('div')
-document.body.appendChild(scoreboard)
+    const scoreboard = document.createElement('div')
+    document.body.appendChild(scoreboard)
 
-scoreboard()
+    createScoreboard()
 
-function scoreboard() {
-    scoreboard.style.height = '20px'
-    scoreboard.style.width = '40px'
-    scoreboard.style.backgroundColor = 'blue'
+    function createScoreboard() {
+        scoreboard.style.height = '40px'
+        scoreboard.style.width = '120px'
+        scoreboard.style.backgroundColor = 'black'
+        scoreboard.style.position = 'absolute'
+        scoreboard.style.right = '20px'
+        scoreboard.style.top = '20px'
+        scoreboard.style.color = 'white'
+    }
+    const levels = document.createElement('div')
+document.body.appendChild(levels)
+
+createLevel()
+
+function createLevel() {
+    scoreboard.style.height = '40px'
+    scoreboard.style.width = '120px'
+    scoreboard.style.backgroundColor = 'black'
     scoreboard.style.position = 'absolute'
-    scoreboard.style.right = '20px'
+    scoreboard.style.right = '180px'
     scoreboard.style.top = '20px'
+    scoreboard.style.color = 'white'
 }
 
     if(ballXPosition <= ballRadius / 2) {
