@@ -133,32 +133,18 @@ document.addEventListener('keydown', (event) => {
 
     function createScoreboard() {
         scoreboard.style.height = '20px'
-        scoreboard.style.width = '70px'
+        scoreboard.style.width = '140px'
         scoreboard.style.backgroundColor = 'black'
         scoreboard.style.position = 'absolute'
         scoreboard.style.right = '20px'
         scoreboard.style.top = '20px'
         scoreboard.style.color = 'white'
-        scoreboard.innerHTML = `Score: ${score}  Level: ${level}`
+        scoreboard.innerHTML = `Score: ${score}  __Level: ${level}`
         scoreboard.style.padding = '3px'
 
     }
-    const levels = document.createElement('div')
-document.body.appendChild(levels)
 
-createLevels()
 
-function createLevels() {
-    levels.style.height = '20px'
-    levels.style.width = '70px'
-    levels.style.backgroundColor = 'black'
-    levels.style.position = 'absolute'
-    levels.style.right = '120px'
-    levels.style.top = '20px'
-    levels.style.color = 'white'
-    levels.innerHTML = `Level: ${level}`
-    levels.style.padding = '3px'
-}
 
     function loser() {
     if(ballXPosition <= ballRadius / 2) {
@@ -167,7 +153,6 @@ function createLevels() {
 
     function animate() {
         loser()
-        createLevels()
         moveBall()
         moveLPadel()
         requestAnimationFrame(animate)
