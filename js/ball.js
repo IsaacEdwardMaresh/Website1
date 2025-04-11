@@ -26,6 +26,7 @@ let level = 1// increase level by 1 every time score increases by ten
 
 createBall()
 function createBall(){
+    // body.style.backgroundColor = 'red'
     ball.style.height = `${2*ballRadius}px`
     ball.style.width = `${2*ballRadius}px`
     ball.style.borderRadius = "50%"
@@ -158,12 +159,16 @@ document.addEventListener('keydown', (event) => {
         gameOver.style.fontSize = '250px'
         gameOver.style.color = 'red'
         gameOver.innerHTML = 'GAME OVER'
+        gameOver.style.textAlign = 'center'
         gameOver.style.zIndex = '-1'
+        gameOver.style.opacity = '0'
     }
 
     function loser() {
     if(ballXPosition <= 0) {
         gameOver.style.zIndex = '2'
+        gameOver.style.opacity = '1'
+        body.style.overFlow = 'hidden'
         }
     }
 
