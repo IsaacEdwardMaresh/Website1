@@ -162,7 +162,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     function loser() {
-    if(ballXPosition <= ballRadius / 2) {
+    if(ballXPosition <= 0) {
         gameOver.style.zIndex = '2'
         }
     }
