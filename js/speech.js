@@ -67,5 +67,42 @@ function createBox(item) {
     <img src="${item.image}" alt = "${item.text}" />
     <p class = "info"> ${item.text} </p>
     `
+
+
+    box.addEventListener('click', () => {
+        /////////////////////////////////////////////////////////
+        secretMessage(item.text)
+        speakText()
+    })
     main.appendChild(box)
 }
+
+//Initialize speech synthesis
+const message = new speechSynthesisUtterance()
+
+//set text
+function setTextMessage(text) {
+    message.text = text
+}
+
+//speak text
+
+function speakText() {
+    speechSynthesis.speak(message)
+}
+
+
+//toggle text box
+toggleBtn.addEventListener
+
+//voices changed
+speechSynthesis.addEventListener('voiceschanged', getVoices)
+
+//change voice
+voicesSelect.addEventListener('change', setVoice)
+
+//set voice
+function setVoice(e) {
+    message.voice = voices.find(voice => voice.name === e.target.value)
+}
+ ///////////////////////////////////////////////////////////missing
