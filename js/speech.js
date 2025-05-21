@@ -70,6 +70,7 @@ function createBox(item) {
 
 
     box.addEventListener('click', () => {
+        
         /////////////////////////////////////////////////////////
         secretMessage(item.text)
         speakText()
