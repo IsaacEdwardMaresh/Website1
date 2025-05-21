@@ -70,10 +70,12 @@ function createBox(item) {
 
 
     box.addEventListener('click', () => {
-        
-        /////////////////////////////////////////////////////////
-        secretMessage(item.text)
+        setTextMessage(item.text)
         speakText()
+
+        // add active effect
+        box.classList.add('active')
+        setTimeout(() => )/////////////////////////////////////
     })
     main.appendChild(box)
 }
@@ -106,4 +108,11 @@ voicesSelect.addEventListener('change', setVoice)
 function setVoice(e) {
     message.voice = voices.find(voice => voice.name === e.target.value)
 }
- ///////////////////////////////////////////////////////////missing
+
+getVoices()
+
+//read text btn
+readBtn.addEventListener('click', () => {
+    setTextMessage(textarea.value)
+    speakText()
+})
