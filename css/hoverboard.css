@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #333;
+    background-color: #111;
     display: flex;
     align-iems: center;
     justify-content: center;
@@ -16,4 +16,17 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 400px;
+}
+
+.square {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 2px #000;
+    height:16px;
+    width: 16px;
+    margin: 2px;
+    transition: 2s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
 }
